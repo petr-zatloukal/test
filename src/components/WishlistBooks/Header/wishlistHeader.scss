@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.wishlistHeader {
+  font-size: 1em;
+  text-align: center;
+  height: 30px;
+  background-color: $blue-accent;
+  color: $white;
+  padding: $spacing-3xs $spacing-xs;
+}

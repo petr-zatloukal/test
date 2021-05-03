@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+.booksList {
+  background-color: $white;
+  border: 1px solid $blue-accent;
+}
+
+
+.booksListGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid $blue-accent;
+  border-right: 1px solid $blue-accent;
+}
+
+.booksListGrid > div {
+  padding: $spacing-3xs $spacing-xs;
+  border-left: 1px solid $blue-accent;
+  border-bottom: 1px solid $blue-accent;
+}
+
+.booksListGrid > div div.pointer{
+  cursor: pointer;
+}

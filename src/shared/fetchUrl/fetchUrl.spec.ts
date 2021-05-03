@@ -1,7 +1,10 @@
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
+import chaiAsPromised  from 'chai-as-promised';
 import fetchUrl from './fetchUrl';
 import sinon from 'sinon';
 import assert from 'assert';
+
+chai.use(chaiAsPromised);
 
 declare global {
     namespace NodeJS {
@@ -46,6 +49,7 @@ describe('Testing FetchUrl - Wrapper over fetch', () => {
         // Inject mock fetch into global
         global.fetch = mockFetch;
         const fetchResponse = fetchUrl('/api/v1/someUrl');
+        // @ts-ignore
         expect(fetchResponse).to.eventually.be.rejectedWith(res);
         delete global.fetch;
     });
